@@ -1,0 +1,127 @@
+$color-dark-grey: rgba(255, 255, 255, 0.5);
+$color-light-grey: rgba(255, 255, 255, 0.75);
+$bg-color-dark-grey: #111;
+$bg-color-light-grey: #222;
+
+$padding-y-medium: 60px 0px 80px 0px;
+$padding-y-large: 120px 0px 160px 0px;
+$padding-b: 0.5rem;
+
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+
+/* Home */
+html, body {
+	font-family: "Josefin Sans", sans-serif;
+	height: 100%;
+}
+
+/* Header */
+header {
+	background-image: url("../images/antonyvule-bg.jpg");
+	background-attachment: fixed;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #000;
+	height: 100%;
+}
+
+#header-content {
+	color: $color-light-grey;
+	padding-top: 240px;
+	font-size: 2.8rem;
+}
+
+@media (min-width: $screen-sm) {
+	#header-content {
+		font-size: 3.4rem;
+	}
+}
+
+@media (min-width: $screen-lg) {
+	#header-content {
+		font-size: 4.8rem;
+	}
+}
+
+/* Navigation Bar */
+.bg-dark {
+	background-color: $bg-color-light-grey !important;
+}
+
+.navbar-dark .navbar-toggler:hover {
+	background-color: $color-dark-grey;
+}
+
+/* Main */
+section {
+	padding: $padding-y-medium;
+	font-size: 1.18rem;
+
+	li {
+		padding: 0.25rem $padding-b;
+	}
+}
+
+#about, #skills, #contact {
+	color: $color-light-grey;
+	background-color: $bg-color-dark-grey;
+}
+
+#about {
+	font-size: 1.2rem;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+h3 {
+	font-size: 2.4rem;
+	padding-bottom: $padding-b;
+}
+
+h4 {
+	padding-top: 0.5rem;
+	padding-bottom: $padding-b;
+}
+
+@media (min-width: $screen-md) {
+	section {
+		padding: $padding-y-large;
+	}
+	#about {
+		font-size: 1.8rem;
+	}
+	h2 {
+		font-size: 1.6rem;
+	}
+	h3 {
+		font-size: 2.8rem;
+	}
+}
+
+/* Footer */
+footer {
+	color: $color-dark-grey;
+	background-color: $bg-color-light-grey;
+	padding: $padding-y-medium;
+	text-align: center;
+
+	a {
+		color: $color-dark-grey;
+
+		&:hover {
+			color: $color-light-grey;
+			text-decoration: none;
+		}
+	}
+}

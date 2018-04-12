@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300");
+/* Home */
+html, body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100%;
+}
+
+/* Header */
+header {
+  background-image: url("../images/antonyvule-bg.jpg");
+  background-attachment: fixed;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  height: 100%;
+}
+
+#header-content {
+  color: rgba(255, 255, 255, 0.75);
+  padding-top: 240px;
+  font-size: 2.8rem;
+}
+
+@media (min-width: 576px) {
+  #header-content {
+    font-size: 3.4rem;
+  }
+}
+@media (min-width: 992px) {
+  #header-content {
+    font-size: 4.8rem;
+  }
+}
+/* Navigation Bar */
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.navbar-dark .navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Main */
+section {
+  padding: 60px 0px 80px 0px;
+  font-size: 1.18rem;
+}
+section li {
+  padding: 0.25rem 0.5rem;
+}
+
+#about, #skills, #contact {
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #111;
+}
+
+#about {
+  font-size: 1.2rem;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  padding-bottom: 0.5rem;
+}
+
+h4 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 120px 0px 160px 0px;
+  }
+
+  #about {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+/* Footer */
+footer {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #222;
+  padding: 60px 0px 80px 0px;
+  text-align: center;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.5);
+}
+footer a:hover {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
