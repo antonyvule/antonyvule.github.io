@@ -22,6 +22,11 @@ header {
   font-size: 2.8rem;
 }
 
+@media (min-width: 992px) {
+  #header-content {
+    font-size: 3.6rem;
+  }
+}
 /* Navigation Bar */
 .bg-dark {
   background-color: #222 !important;
@@ -70,6 +75,23 @@ h4 {
   opacity: 0;
 }
 
+@media (min-width: 992px) {
+  section {
+    padding: 120px 0px 160px 0px;
+  }
+
+  #about {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+}
 /* Footer */
 footer {
   color: rgba(255, 255, 255, 0.5);
