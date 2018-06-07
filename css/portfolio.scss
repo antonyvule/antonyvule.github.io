@@ -3,13 +3,16 @@ $color-light-grey: rgba(255, 255, 255, 0.75);
 $bg-color-dark-grey: #111;
 $bg-color-light-grey: #222;
 
-$padding-y-medium: 60px 0px 80px 0px;
-$padding-y-large: 120px 0px 160px 0px;
-$padding-b: 0.5rem;
+$padding-y-md: 60px 0px 80px 0px;
+// $padding-y-large: 120px 0px 160px 0px;
+$padding-xs: 0.5rem;
 
-$screen-sm: 576px;
-$screen-md: 768px;
-$screen-lg: 992px;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+
+// $screen-sm: 576px;
+// $screen-md: 768px;
+// $screen-lg: 992px;
 
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
 
@@ -33,20 +36,20 @@ header {
 #header-content {
 	color: $color-light-grey;
 	padding-top: 240px;
-	font-size: 2.8rem;
+	font-size: $font-size-sm*2;
 }
 
-@media (min-width: $screen-sm) {
-	#header-content {
-		font-size: 3.4rem;
-	}
-}
+// @media (min-width: $screen-sm) {
+// 	#header-content {
+// 		font-size: 3.4rem;
+// 	}
+// }
 
-@media (min-width: $screen-lg) {
-	#header-content {
-		font-size: 4.8rem;
-	}
-}
+// @media (min-width: $screen-lg) {
+// 	#header-content {
+// 		font-size: 4.8rem;
+// 	}
+// }
 
 /* Navigation Bar */
 .bg-dark {
@@ -59,11 +62,11 @@ header {
 
 /* Main */
 section {
-	padding: $padding-y-medium;
-	font-size: 1.18rem;
+	padding: $padding-y-md;
+	font-size: $font-size-xs;
 
 	li {
-		padding: 0.25rem $padding-b;
+		padding: $padding-xs/2 $padding-xs;
 	}
 }
 
@@ -73,7 +76,7 @@ section {
 }
 
 #about {
-	font-size: 1.2rem;
+	font-size: $font-size-sm;
 }
 
 h2, h3 {
@@ -81,33 +84,32 @@ h2, h3 {
 }
 
 h2 {
-	font-size: 1.4rem;
+	font-size: $font-size-sm;
 }
 
 h3 {
-	font-size: 2.4rem;
-	padding-bottom: $padding-b;
+	font-size: $font-size-xs*2;
+	padding-bottom: $padding-xs;
 }
 
 h4 {
-	padding-top: 0.5rem;
-	padding-bottom: $padding-b;
+	padding: $padding-xs 0rem;
 }
 
-@media (min-width: $screen-md) {
-	section {
-		padding: $padding-y-large;
-	}
-	#about {
-		font-size: 1.8rem;
-	}
-	h2 {
-		font-size: 1.6rem;
-	}
-	h3 {
-		font-size: 2.8rem;
-	}
-}
+// @media (min-width: $screen-md) {
+// 	section {
+// 		padding: $padding-y-large;
+// 	}
+// 	#about {
+// 		font-size: 1.8rem;
+// 	}
+// 	h2 {
+// 		font-size: 1.6rem;
+// 	}
+// 	h3 {
+// 		font-size: $font-size-sm*2;
+// 	}
+// }
 
 .fadein {
   opacity: 0;
@@ -117,7 +119,7 @@ h4 {
 footer {
 	color: $color-dark-grey;
 	background-color: $bg-color-light-grey;
-	padding: $padding-y-medium;
+	padding: $padding-y-md;
 	text-align: center;
 
 	a {
