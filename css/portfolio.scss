@@ -7,6 +7,7 @@ $padding-y-md: 60px 0px 80px 0px;
 $padding-y-lg: 120px 0px 160px 0px;
 $padding-xs: 0.5rem;
 
+$font-size-default: 1rem;
 $font-size-xs: 1.2rem;
 $font-size-sm: 1.4rem;
 
@@ -19,6 +20,7 @@ $screen-lg: 992px;
 /* Home */
 html, body {
 	font-family: "Josefin Sans", sans-serif;
+	background-color: rgba(0, 0, 0, 0.02);
 	height: 100%;
 }
 
@@ -50,14 +52,21 @@ header {
 	background-color: $bg-color-light-grey !important;
 }
 
-.navbar-dark .navbar-toggler:hover {
-	background-color: $color-dark-grey;
+// #navbar-main {
+// 	font-size: $font-size-xs;
+// }
+
+.navbar-dark .navbar-toggler:focus {
+	outline-color: $color-light-grey;
+}
+
+#navbar-name {
+	color: $color-light-grey;
 }
 
 /* Main */
 section {
 	padding: $padding-y-md;
-	font-size: $font-size-xs;
 
 	li {
 		padding: $padding-xs/2 $padding-xs;
@@ -70,7 +79,7 @@ section {
 }
 
 #about {
-	font-size: $font-size-sm;
+	font-size: $font-size-xs;
 }
 
 h2, h3 {
@@ -78,7 +87,7 @@ h2, h3 {
 }
 
 h2 {
-	font-size: $font-size-sm;
+	font-size: $font-size-xs;
 }
 
 h3 {
@@ -87,11 +96,44 @@ h3 {
 }
 
 h4 {
+	font-size: $font-size-xs;
 	padding: $padding-xs 0rem;
 }
 
 .fadein {
   opacity: 0;
+}
+
+.card {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: $font-size-default;
+}
+
+.card-subtitle {
+  margin-bottom: $font-size-xs;
+}
+
+@media (min-width: $screen-sm) {
+	section {
+		font-size: $font-size-xs;
+	}
+
+	#about {
+		font-size: $font-size-sm;
+	}
+
+	h2 {
+		font-size: $font-size-sm;
+	}
+
+	h4 {
+		font-size: $font-size-sm;
+		padding: $padding-xs 0rem;
+	}
 }
 
 @media (min-width: $screen-lg) {

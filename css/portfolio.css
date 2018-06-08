@@ -2,6 +2,7 @@
 /* Home */
 html, body {
   font-family: "Josefin Sans", sans-serif;
+  background-color: rgba(0, 0, 0, 0.02);
   height: 100%;
 }
 
@@ -32,14 +33,17 @@ header {
   background-color: #222 !important;
 }
 
-.navbar-dark .navbar-toggler:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.navbar-dark .navbar-toggler:focus {
+  outline-color: rgba(255, 255, 255, 0.75);
+}
+
+#navbar-name {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Main */
 section {
   padding: 60px 0px 80px 0px;
-  font-size: 1.2rem;
 }
 section li {
   padding: 0.25rem 0.5rem;
@@ -51,7 +55,7 @@ section li {
 }
 
 #about {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 h2, h3 {
@@ -59,7 +63,7 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 h3 {
@@ -68,6 +72,7 @@ h3 {
 }
 
 h4 {
+  font-size: 1.2rem;
   padding: 0.5rem 0rem;
 }
 
@@ -75,6 +80,37 @@ h4 {
   opacity: 0;
 }
 
+.card {
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-subtitle {
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  section {
+    font-size: 1.2rem;
+  }
+
+  #about {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    padding: 0.5rem 0rem;
+  }
+}
 @media (min-width: 992px) {
   section {
     padding: 120px 0px 160px 0px;
