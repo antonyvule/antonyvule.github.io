@@ -1,0 +1,44 @@
+/* Global focus styles for accessibility */
+*:focus-visible {
+  outline: 3px solid #4c9aff !important; /* Always visible outline color */
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px rgba(76, 154, 255, 0.5) !important;
+}
+
+/* Dark mode focus styles */
+.dark *:focus-visible {
+  outline-color: #82b1ff !important; /* Higher contrast for dark mode */
+}
+
+/* Improve keyboard navigation visuals */
+a:focus-visible, 
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-radius: 0.25rem;
+  transition: outline-color 0.2s ease-in-out;
+}
+
+/* Skip link styles - will be visually hidden until focused */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.sr-only.focus-visible,
+.sr-only:focus-visible,
+.sr-only:focus {
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
