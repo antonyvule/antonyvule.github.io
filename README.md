@@ -1,22 +1,22 @@
-# Antony Vu Le - Portfolio Website
+# Antony Vu Le - Professional Portfolio
 
 ## Overview
 
-This is the official portfolio website for Antony Vu Le, showcasing professional experience, projects, skills, and contact information. The website is designed to present Antony's work and capabilities in a modern, accessible, and responsive format.
+This is the official professional portfolio website of Antony Vu Le, software developer based in Brisbane, Australia. This website showcases my professional experience, technical skills, certifications, and projects. Designed with accessibility and user experience in mind, this portfolio presents my capabilities as a software developer in a modern, responsive format.
 
-## Live Website
+## Live Portfolio
 
-Visit the live portfolio: [https://antonyvule.github.io](https://antonyvule.github.io)
+Visit my live portfolio: [https://antonyvule.github.io](https://antonyvule.github.io)
 
-## Features
+## Portfolio Features
 
+- **Professional Sections**: About Me, Work Experience, Technical Skills, Certifications, and Contact information
 - **Responsive Design**: Optimized for all device sizes from mobile to desktop
-- **Dark/Light Mode**: Toggle between color schemes based on preference
-- **Accessibility**: WCAG compliant with keyboard navigation and screen reader support
-- **Performance Optimized**: Code splitting, lazy loading, and optimized assets
-- **SEO Friendly**: Proper meta tags, semantic HTML, and structured data
-- **Animated UI**: Smooth transitions and interactions using Framer Motion
-- **Particle Background**: Interactive and adaptive background effects
+- **Accessibility Focus**: WCAG compliant with keyboard navigation, screen reader support, and proper color contrast
+- **Dark/Light Mode**: Toggle between color schemes based on user preference
+- **Performance Optimized**: Code splitting, lazy loading, and adaptive features for different devices
+- **Modern Animations**: Smooth transitions and interactions using Framer Motion
+- **Interactive Elements**: Particle background effects and hover animations
 
 ## Technologies Used
 
@@ -59,10 +59,10 @@ npm start
 npm run deploy
 ```
 
-## Contact
+## Contact Me
 
-For inquiries or collaborations, please reach out through the contact form on the website or via the social media links provided there.
+For professional inquiries, collaboration opportunities, or employment discussions, please reach out through the contact form on my portfolio website or via LinkedIn at [linkedin.com/in/antonyvule](https://linkedin.com/in/antonyvule).
 
 ---
 
-&copy; 2025 Antony Vu Le. All Rights Reserved.
+&copy; 2025 Antony Vu Le. All Rights Reserved. | Software Developer | Brisbane, Australia
