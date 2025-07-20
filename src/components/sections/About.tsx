@@ -32,7 +32,7 @@ const About: React.FC = () => {
   } as const;
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -42,13 +42,13 @@ const About: React.FC = () => {
           ref={ref}
         >
           <motion.h2 
-            className="section-title text-dark"
+            className="section-title text-dark dark:text-white"
             style={{ scale }}
           >
             About Me
           </motion.h2>
           <div className="w-24 h-1 bg-primary mx-auto my-4"></div>
-          <motion.p className="section-subtitle max-w-3xl mx-auto">
+          <motion.p className="section-subtitle max-w-3xl mx-auto dark:text-gray-300">
             A passionate engineer with expertise in Microsoft technologies and cloud solutions
           </motion.p>
         </motion.div>
@@ -61,28 +61,28 @@ const About: React.FC = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <motion.p 
-            className="text-lg mb-6 leading-relaxed"
+            className="text-lg mb-6 leading-relaxed dark:text-gray-200"
             variants={itemVariants}
           >
             With over 10 years of experience delivering scalable, cloud-ready solutions, I bring deep full-stack development expertise, strong Microsoft technology skills, and a pragmatic, business-focused mindset to every project.
           </motion.p>
           
           <motion.p 
-            className="text-lg mb-6 leading-relaxed"
+            className="text-lg mb-6 leading-relaxed dark:text-gray-200"
             variants={itemVariants}
           >
             I've worked across B2B and B2C sectors, including education, e-commerce, and enterprise systems, building robust applications using .NET technologies and modern front-end frameworks. I'm passionate about writing clean, maintainable code, improving team efficiency, and solving real-world business challenges through technology.
           </motion.p>
           
           <motion.p 
-            className="text-lg mb-6 leading-relaxed"
+            className="text-lg mb-6 leading-relaxed dark:text-gray-200"
             variants={itemVariants}
           >
             I also have hands-on experience with DevOps, automation, and cloud services, leveraging GitHub Actions, Azure DevOps, and Infrastructure-as-Code (Bicep) to streamline delivery, increase reliability, and support scalable systems.
           </motion.p>
           
           <motion.p 
-            className="text-lg leading-relaxed"
+            className="text-lg leading-relaxed dark:text-gray-200"
             variants={itemVariants}
           >
             I'm a strong advocate for modern engineering practices such as automated testing, Agile (Scrum & Kanban), and API-first development. I actively explore emerging tools like Azure OpenAI, GitHub Copilot, and Windsurf to drive AI-powered improvements across the development lifecycle.

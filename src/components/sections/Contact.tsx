@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
   ], []);
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
       {/* Subtle interactive background */}
       <ParticleBackground particleCount={25} mouseInteraction={true} className="opacity-20" />
       
@@ -126,9 +126,9 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-dark">Get In Touch</h2>
+          <h2 className="section-title text-dark dark:text-white">Get In Touch</h2>
           <div className="w-24 h-1 bg-primary mx-auto my-4"></div>
-          <p className="section-subtitle max-w-3xl mx-auto">
+          <p className="section-subtitle max-w-3xl mx-auto dark:text-gray-300">
             Have a project in mind or want to discuss potential opportunities? Let's connect!
           </p>
         </motion.div>
@@ -165,16 +165,22 @@ const Contact: React.FC = () => {
                     <span className={method.iconClass}>{React.createElement(method.icon)}</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">{method.title}</h4>
+                    <h4 className="font-medium mb-3 text-gray-700 dark:text-gray-300">Connect with me:</h4>
                     {method.link ? (
                       <a 
                         href={method.link} 
                         className="text-gray-600 hover:text-primary transition-colors"
                       >
-                        {method.value}
+                        <div className="ml-3">
+                          <p className="font-medium dark:text-white">{method.title}</p>
+                          <p className="text-gray-600 dark:text-gray-300">{method.value}</p>
+                        </div>
                       </a>
                     ) : (
-                      <p className="text-gray-600">{method.value}</p>
+                      <div className="ml-3">
+                        <p className="font-medium dark:text-white">{method.title}</p>
+                        <p className="text-gray-600 dark:text-gray-300">{method.value}</p>
+                      </div>
                     )}
                   </div>
                 </motion.div>
@@ -183,14 +189,14 @@ const Contact: React.FC = () => {
             
             {/* Social links */}
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
+              <h3 className="text-xl font-bold mb-6 dark:text-white">Connect With Me</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={index}
                     href={social.link}
                     aria-label={social.label}
-                    className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300"
+                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-700 text-primary dark:text-blue-400 flex items-center justify-center hover:bg-primary hover:text-white dark:hover:bg-blue-600 transition-colors duration-300"
                     whileHover={{ 
                       scale: 1.1,
                       rotate: 5,
@@ -230,13 +236,13 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="bg-white rounded-xl shadow-xl p-8 relative overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 md:p-12 relative overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2 z-0"></div>
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-secondary/5 rounded-full translate-y-1/2 -translate-x-1/2 z-0"></div>
               
               <motion.h3 
-                className="text-2xl font-bold mb-6 relative z-10"
+                className="text-2xl font-bold mb-6 relative z-10 dark:text-white"
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -282,7 +288,7 @@ const Contact: React.FC = () => {
                   )}
                   
                   <motion.div variants={itemVariants}>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Name *
                     </label>
                     <input
@@ -291,13 +297,13 @@ const Contact: React.FC = () => {
                       name="name"
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 focus:border-primary dark:focus:border-blue-500 transition-colors"
                       required
                     />
                   </motion.div>
                   
                   <motion.div variants={itemVariants}>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Email *
                     </label>
                     <input
@@ -306,13 +312,13 @@ const Contact: React.FC = () => {
                       name="email"
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 focus:border-primary dark:focus:border-blue-500 transition-colors"
                       required
                     />
                   </motion.div>
                   
                   <motion.div variants={itemVariants}>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Subject
                     </label>
                     <input
@@ -321,12 +327,12 @@ const Contact: React.FC = () => {
                       name="subject"
                       value={formState.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 focus:border-primary dark:focus:border-blue-500 transition-colors"
                     />
                   </motion.div>
                   
                   <motion.div variants={itemVariants}>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Message *
                     </label>
                     <textarea
@@ -335,7 +341,7 @@ const Contact: React.FC = () => {
                       rows={5}
                       value={formState.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md focus:ring-2 focus:ring-primary dark:focus:ring-blue-500 focus:border-primary dark:focus:border-blue-500 transition-colors"
                       required
                     />
                   </motion.div>

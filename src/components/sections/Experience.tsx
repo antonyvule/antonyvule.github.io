@@ -72,7 +72,7 @@ const Experience: React.FC = () => {
   }), []);
 
   return (
-    <section id="experience" className="py-20 relative overflow-hidden">
+    <section id="experience" className="py-20 relative overflow-hidden dark:bg-gray-900">
       {/* Add floating technology icons in the background */}
       <FloatingIcons count={10} className="opacity-20" />
       
@@ -84,9 +84,9 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="section-title text-dark">Work Experience</h2>
+          <h2 className="section-title text-dark dark:text-white">Work Experience</h2>
           <div className="w-24 h-1 bg-primary mx-auto my-4"></div>
-          <p className="section-subtitle max-w-3xl mx-auto">
+          <p className="section-subtitle max-w-3xl mx-auto dark:text-gray-300">
             Over a decade of professional software development experience
           </p>
         </motion.div>
@@ -131,31 +131,31 @@ const Experience: React.FC = () => {
 
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:ml-auto' : 'md:pl-12'}`}>
                   <motion.div 
-                    className="bg-white p-6 rounded-lg shadow-xl"
+                    className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl"
                     whileHover={{ 
                       scale: 1.03,
                       boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)"
                     }}
                   >
-                    <div className="flex items-center mb-4 text-primary">
+                    <div className="flex items-center mb-4 text-primary dark:text-blue-400">
                       <span className="mr-2">{React.createElement(castIconToComponent(FaCalendarAlt))}</span>
                       <span className="font-semibold">{exp.period}</span>
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-1">{exp.title}</h3>
+                    <h3 className="text-xl font-bold mb-1 dark:text-white">{exp.title}</h3>
                     
-                    <div className="flex items-center mb-3 text-gray-600">
+                    <div className="flex items-center mb-3 text-gray-600 dark:text-gray-300">
                       <span className="mr-2">{React.createElement(castIconToComponent(FaBuilding))}</span>
                       <span>{exp.company}</span>
                     </div>
                     
-                    <p className="text-gray-600 mb-4">{exp.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">{exp.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mt-3">
                       {exp.technologies.map((tech, techIndex) => (
                         <motion.span
                           key={techIndex}
-                          className="bg-gray-100 text-primary py-1 px-3 rounded-full text-sm font-medium"
+                          className="bg-gray-100 dark:bg-gray-700 text-primary dark:text-blue-300 py-1 px-3 rounded-full text-sm font-medium"
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           viewport={{ once: true }}
@@ -203,7 +203,7 @@ const Experience: React.FC = () => {
                 <span className="text-2xl">{React.createElement(castIconToComponent(FaBriefcase))}</span>
               </motion.div>
               <h4 className="mt-4 font-bold text-lg">Professional Growth</h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 Continuous learning and career advancement
               </p>
             </div>

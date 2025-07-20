@@ -81,7 +81,7 @@ const Skills: React.FC = () => {
   }), []);
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.div
           className="text-center mb-12"
@@ -90,8 +90,8 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="section-title mb-4">Technical Skills</h2>
-          <p className="section-subtitle max-w-3xl mx-auto">
+          <h2 className="section-title mb-4 dark:text-white">Technical Skills</h2>
+          <p className="section-subtitle max-w-3xl mx-auto dark:text-gray-300">
             Over 10 years of specialised expertise in full-stack development with Microsoft technologies
           </p>
         </motion.div>
@@ -106,7 +106,7 @@ const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               variants={itemVariants}
             >
               <div className={`${category.color} h-2 w-full`}></div>
@@ -117,7 +117,7 @@ const Skills: React.FC = () => {
                       {React.createElement(category.icon)}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-xl font-bold dark:text-white">{category.title}</h3>
                 </div>
                 
                 <ul className="space-y-2">
@@ -130,8 +130,8 @@ const Skills: React.FC = () => {
                       transition={{ delay: 0.1 * skillIndex }}
                       viewport={{ once: true }}
                     >
-                      <span className="w-2 h-2 bg-gray-400 rounded-full mr-2"></span>
-                      <span>{skill}</span>
+                      <span className="w-2 h-2 bg-gray-400 dark:bg-gray-300 rounded-full mr-2"></span>
+                      <span className="dark:text-gray-200">{skill}</span>
                     </motion.li>
                   ))}
                 </ul>

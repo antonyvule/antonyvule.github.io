@@ -12,15 +12,21 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   // Check if user has a preferred color scheme or previously saved preference
   const getInitialTheme = (): Theme => {
-    // Check for saved preference in localStorage
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
-      return savedTheme;
-    }
+    if (typeof window === 'undefined') return 'light';
     
-    // Check for system preference
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
+    try {
+      // Check for saved preference in localStorage
+      const savedTheme = localStorage.getItem('theme') as Theme;
+      if (savedTheme && (savedTheme === 'light' || savedTheme === 'dark')) {
+        return savedTheme;
+      }
+      
+      // Check for system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+    } catch (error) {
+      console.error('Error accessing browser APIs:', error);
     }
     
     // Default to light
@@ -36,15 +42,26 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
   // Update body class and localStorage when theme changes
   useEffect(() => {
-    document.documentElement.classList.remove('light-mode', 'dark-mode');
-    document.documentElement.classList.add(`${theme}-mode`);
-    localStorage.setItem('theme', theme);
+    // Skip if not in browser environment
+    if (typeof window === 'undefined' || !document || !document.documentElement) {
+      return;
+    }
     
-    // Apply theme to html tag for Tailwind dark mode
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    try {
+      document.documentElement.classList.remove('light-mode', 'dark-mode');
+      document.documentElement.classList.add(`${theme}-mode`);
+      
+      // Apply theme to html tag for Tailwind dark mode
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      
+      // Save to localStorage
+      localStorage.setItem('theme', theme);
+    } catch (error) {
+      console.error('Error updating theme:', error);
     }
   }, [theme]);
 
